@@ -8,6 +8,8 @@ This project is a binary classification task aimed at identifying whether an SMS
 This project applies Natural Language Processing (NLP) techniques and machine learning models to build an effective spam classifier. The goal is to develop, evaluate, and compare different models for SMS spam detection.
 
 #**Key Objectives**
+
+
 -Understand text classification using NLP and machine learning.
 -Apply data preprocessing techniques for text-based datasets.
 -Train multiple classification models and compare performance.
