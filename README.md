@@ -1,31 +1,144 @@
-# SMS Spam Classification using Machine Learning
+### SMS Spam Classification using Machine Learning
 
- 
-#-**Project Overview:**
+#**Overview**
 
-This project is a binary classification task aimed at identifying whether an SMS message is spam or ham (legitimate). The dataset used is the SMS Spam Collection Dataset from Kaggle, containing 5,574 messages labeled as either spam or ham.
+This project focuses on building a binary classification model to classify SMS as Spam or Not Spam (Ham). The goal is to demonstrate the end-to-end process of building a machine learning model, from data preprocessing and feature extraction to model training, evaluation, and interpretation of results. The project uses the Spam SMS Dataset and leverages Python libraries like Scikit-learn, Pandas, and Matplotlib.
 
-This project applies Natural Language Processing (NLP) techniques and machine learning models to build an effective spam classifier. The goal is to develop, evaluate, and compare different models for SMS spam detection.
+## Key Objectives
 
-#**Key Objectives**
+1. **Data Preprocessing**  
+   Clean and preprocess text data for machine learning.
+
+2. **Feature Extraction**  
+   Convert text data into numerical features using `CountVectorizer`.
+
+3. **Model Training**  
+   Train a **Multinomial Naive Bayes** classifier for spam detection.
+
+4. **Model Evaluation**  
+   Evaluate the model using metrics like:
+   - Accuracy
+   - Precision
+   - Recall
+   - F1-Score
+   - ROC-AUC Score
+
+5. **Visualization**  
+   Plot the **ROC Curve** to visualize model performance.
+
+6. **Interpretation**  
+   Analyze the impact of **False Positives** and **False Negatives** on decision-making.
+
+   ## Dataset
+
+The dataset used in this project is the **Spam SMS Dataset**, which contains labeled SMS messages classified as either "spam" or "ham" (not spam). It is available on [Kaggle](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset).
+## Steps Performed
+
+1. **Data Loading and Exploration**  
+   Loaded the dataset and explored its structure.
+
+2. **Data Preprocessing**  
+   Converted labels into binary values (0 for "ham" and 1 for "spam").
+
+3. **Train-Test Split**  
+   Split the dataset into training and testing sets.
+
+4. **Feature Extraction**  
+   Used `CountVectorizer` to convert text data into numerical features.
+
+5. **Model Training**  
+   Trained a **Multinomial Naive Bayes** classifier.
+
+6. **Model Evaluation**  
+   Evaluated the model using metrics like:
+   - Accuracy
+   - Precision
+   - Recall
+   - F1-Score
+   - ROC-AUC Score
+
+7. **Visualization**  
+   Plotted the **ROC curve** to analyze model performance.
+
+8. **Interpretation**  
+   Analyzed the confusion matrix to understand the impact of **False Positives** and **False Negatives**.
+## Key Challenges
+
+1. **Imbalanced Dataset**  
+   The dataset had more "ham" messages than "spam," which could lead to biased model performance. This was addressed by using appropriate evaluation metrics like **Precision** and **Recall**.
+
+2. **Text Preprocessing**  
+   Handling raw text data required careful preprocessing, such as:
+   - Removing special characters
+   - Converting text to lowercase
+
+3. **Model Selection**  
+   Choosing the right algorithm (**Naive Bayes**) for text classification and tuning hyperparameters for optimal performance.
+## Results
+
+- **Accuracy**  
+  Achieved an accuracy of over **98%** on the test set.
+
+- **Precision**  
+  High precision indicates that the model correctly identified most **spam** messages.
+
+- **Recall**  
+  High recall indicates that the model minimized the number of **spam** messages incorrectly classified as **ham**.
+
+- **ROC-AUC Score**  
+  A score close to **1** indicates excellent model performance in distinguishing between **spam** and **ham**.
 
 
--Understand text classification using NLP and machine learning.
--Apply data preprocessing techniques for text-based datasets.
--Train multiple classification models and compare performance.
--Learn model evaluation metrics like Precision, Recall, F1-score, and ROC-AUC.
--Handle class imbalance issues and improve model performance.
+## Future Enhancements
 
-#**Dataset Details**
+1. **Advanced Text Preprocessing**  
+   Incorporate techniques like **stemming**, **lemmatization**, and **stopword removal** to improve text preprocessing.
 
--Source: Kaggle - SMS Spam Collection Dataset
--Total Messages: 5,574
+2. **Model Improvement**  
+   Experiment with other algorithms like:
+   - **Logistic Regression**
+   - **Random Forest**
+   - Deep learning models (e.g., **LSTM**)
 
--Columns:
+3. **Deployment**  
+   Deploy the model as a web application using **Flask** or **Streamlit** for real-time spam detection.
 
-  -v1: Label ("ham" for legitimate messages, "spam" for spam messages)
+4. **Handling Imbalanced Data**  
+   Use techniques like **SMOTE** (Synthetic Minority Over-sampling Technique) or **class weighting** to address dataset imbalance.
 
-  -v2: Raw text of the SMS message
+5. **Hyperparameter Tuning**  
+   Optimize model performance using techniques like **GridSearchCV** or **RandomizedSearchCV**.
+## Learning Outcomes
 
--Data Imbalance: The dataset contains more ham messages than spam, which requires handling class imbalance.
+Through this project, I gained hands-on experience in:
+
+- **Data Preprocessing**  
+  Cleaning and preparing text data for machine learning.
+
+- **Feature Extraction**  
+  Converting text into numerical features using **CountVectorizer**.
+
+- **Model Training**  
+  Building and training a machine learning model using **Scikit-learn**.
+
+- **Model Evaluation**  
+  Interpreting metrics like:
+  - Accuracy
+  - Precision
+  - Recall
+  - F1-Score
+  - ROC-AUC
+
+- **Visualization**  
+  Plotting **ROC curves** to analyze model performance.
+
+- **Problem-Solving**  
+  Addressing challenges like **imbalanced datasets** and **text preprocessing**.
+
+## How to Run the Code
+
+1. **Clone the repository**  
+   Run the following command to clone the repository:
+   ```bash
+   git clone https://github.com/your-username/spam-classification.git
 
